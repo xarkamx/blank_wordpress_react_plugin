@@ -1,0 +1,141 @@
+{
+  "onLoginFail": {
+    "es": "Nombre de usuario y/o contraseña no coinciden."
+  },
+  "User": {
+    "es": "Usuario"
+  },
+  "Username": {
+    "es": "Nombre de usuario"
+  },
+  "Email Address": {
+    "es": "Correo Electronico"
+  },
+  "First Name": {
+    "es": "Nombre"
+  },
+  "Last Name": {
+    "es": "Apellido"
+  },
+  "City": {
+    "es": "Ciudad"
+  },
+  "Country": {
+    "es": "Pais"
+  },
+  "Postal Code": {
+    "es": "Codigo postal"
+  },
+  "Full Name": {
+    "es": "Nombre Completo"
+  },
+  "Type": {
+    "es": "Tipo"
+  },
+  "Phone": {
+    "es": "Telefono"
+  },
+  "Profile": {
+    "es": "Perfil"
+  },
+  "Fill the Form": {
+    "es": "Rellena el formulario"
+  },
+  "Save": {
+    "es": "Guardar"
+  },
+  "Saved": {
+    "es": "Guardado"
+  },
+  "Sucess": {
+    "es": "La Modificacion ha sido completada"
+  },
+  "Password": {
+    "es": "Contraseña"
+  },
+  "Validate Password": {
+    "es": "Verificar contraseña"
+  },
+  "Check Password": {
+    "es": "Las contraseñas no coinciden"
+  },
+  "Existing Mail": {
+    "es": "Este correo ya existe"
+  },
+  "Type is required": {
+    "es": "Tipo es obligatorio"
+  },
+  "Photo is required": {
+    "es": "La fotografia es obligatoria"
+  },
+  "Has Access": {
+    "es": "Con Acceso"
+  },
+  "Has not Access": {
+    "es": "Sin Acceso"
+  },
+  "Give Password": {
+    "es": "¿Deseas asignar al perfil una contraseña?"
+  },
+  "Edit Password": {
+    "es": "¿Deseas editar la contraseña?"
+  },
+  "Yes, Please": {
+    "es": "Si, por favor!"
+  },
+  "No, Thanks": {
+    "es": "No, Gracias!"
+  },
+  "Empty": {
+    "es": "Vacio"
+  },
+  "": {
+    "es": "Esto no deberia estar vacio"
+  },
+  "Assign the permissions": {
+    "es": "Asigna los permisos"
+  },
+  "Delete the profile": {
+    "es": "Eliminar el perfil"
+  },
+  "personID": {
+    "es": "Identificador Personal"
+  },
+  "houseCode": {
+    "es": "Codigo de vivienda"
+  },
+  "total": {
+    "es": "Total"
+  },
+  "income": {
+    "es": "Ingresos"
+  },
+  "expenses": {
+    "es": "Egresos"
+  },
+  "maintenance": {
+    "es": "Mantenimiento"
+  },
+  "payment": {
+    "es": "Pago"
+  },
+  "agreement": {
+    "es": "Convenio"
+  },
+  "recharge": {
+    "es": "Recargos"
+  },
+  "maintenance fees": {
+    "es": "Cuotas de mantenimiento"
+  },
+  "day": {
+    "es": "días"
+  },
+  "month": {
+    "es": "meses"
+  },
+  "all": { "es": "Global" },
+  "one": { "es": "Individual" },
+  "unitary": { "es": "Unitario" },
+  "meters": { "es": "Por metros" }
+}

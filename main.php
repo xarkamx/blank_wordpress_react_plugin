@@ -9,23 +9,23 @@
  */
 
 require(__DIR__ . "/backend/loader/Loader.php");
-
+cr_requireFolder(__DIR__ . "/backend", "php");
 function cr_add_plugin_scripts()
 {
-    $js = getArrayOfFiles(__DIR__ . "/build/static/js", "chunk.js$");
+  $js = cr_getArrayOfFiles(__DIR__ . "/build/static/js", "chunk.js$");
 
-    $css = getArrayOfFiles(__DIR__ . "/build/static/css", "chunk.css$");
-    foreach ($js as $key => $file) {
-        wp_enqueue_script("script-$key", plugins_url("/build/static/js/$file", __FILE__), [], 1, true);
-    }
-    foreach ($css as $key => $file) {
-        wp_enqueue_style("css-$key", plugins_url("/build/static/css/$file", __FILE__), [], 1);
-    }
-    //wp_enqueue_style('style', get_stylesheet_uri());
+  $css = cr_getArrayOfFiles(__DIR__ . "/build/static/css", "chunk.css$");
+  foreach ($js as $key => $file) {
+    wp_enqueue_script("script-$key", plugins_url("/build/static/js/$file", __FILE__), [], 1, true);
+  }
+  foreach ($css as $key => $file) {
+    wp_enqueue_style("css-$key", plugins_url("/build/static/css/$file", __FILE__), [], 1);
+  }
+  //wp_enqueue_style('style', get_stylesheet_uri());
 }
 function cr_clientFormRegister()
 {
-    return '<div id="cr">...</div>
+  return '<div id="cr">...</div>
     <script>
       !(function (e) {
         function r(r) {
@@ -118,5 +118,10 @@ function cr_clientFormRegister()
       })([]);
     </script>';
 }
+function setDataBase()
+{
+  createConfigTable("config");
+}
+register_activation_hook(__FILE__, 'setDataBase');
 add_shortcode('clientRegister', 'cr_clientFormRegister');
 add_action('wp_enqueue_scripts', 'cr_add_plugin_scripts');

@@ -29,205 +29,22 @@
   }
 }
 
-.input-range__slider {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: white;
-  border: 1px solid #fff;
-  border-radius: 100%;
-  cursor: pointer;
-  display: block;
-  height: 1em;
-  margin-left: -0.5em;
-  margin-top: -0.65em;
-  outline: none;
-  position: absolute;
-  top: 50%;
-  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-  width: 1em;
-  box-shadow: 1px 1px 1px #333, -1px -1px 1px #eee;
-}
-.input-range__slider:active {
-  transform: scale(1.3);
-}
-.input-range__slider:focus {
-  box-shadow: 0 0 0 5px rgba(63, 81, 181, 0.2);
-}
-.input-range--disabled .input-range__slider {
-  background: #cccccc;
-  border: 1px solid #cccccc;
-  box-shadow: none;
-  transform: none;
-}
-
-.input-range__slider-container {
-  transition: left 0.3s ease-out;
-}
-
-.input-range__label {
-  color: #fff;
-  font-size: 1rem;
-  transform: translateZ(0);
-  white-space: nowrap;
-}
-
-.input-range__label--min,
-.input-range__label--max {
-  bottom: -1.4em;
-  position: absolute;
-}
-
-.input-range__label--min {
-  left: 0;
-}
-
-.input-range__label--max {
-  right: 0;
-}
-
-.input-range__label--value {
-  position: absolute;
-  top: -1.8em;
-}
-
-.input-range__label-container {
-  left: -50%;
-  position: relative;
-}
-.input-range__label--max .input-range__label-container {
-  left: 50%;
-}
-
-.input-range__track {
-  background: rgba(247, 168, 49, 1);
-  background: -moz-linear-gradient(
-    left,
-    rgba(247, 168, 49, 1) 0%,
-    rgba(230, 245, 17, 1) 35%,
-    rgba(172, 245, 14, 1) 75%,
-    rgba(39, 230, 67, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    right top,
-    color-stop(0%, rgba(247, 168, 49, 1)),
-    color-stop(35%, rgba(230, 245, 17, 1)),
-    color-stop(75%, rgba(172, 245, 14, 1)),
-    color-stop(100%, rgba(39, 230, 67, 1))
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgba(247, 168, 49, 1) 0%,
-    rgba(230, 245, 17, 1) 35%,
-    rgba(172, 245, 14, 1) 75%,
-    rgba(39, 230, 67, 1) 100%
-  );
-  background: -o-linear-gradient(
-    left,
-    rgba(247, 168, 49, 1) 0%,
-    rgba(230, 245, 17, 1) 35%,
-    rgba(172, 245, 14, 1) 75%,
-    rgba(39, 230, 67, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    left,
-    rgba(247, 168, 49, 1) 0%,
-    rgba(230, 245, 17, 1) 35%,
-    rgba(172, 245, 14, 1) 75%,
-    rgba(39, 230, 67, 1) 100%
-  );
-  background: linear-gradient(
-    to right,
-    rgba(247, 168, 49, 1) 0%,
-    rgba(230, 245, 17, 1) 35%,
-    rgba(172, 245, 14, 1) 75%,
-    rgba(39, 230, 67, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7a831', endColorstr='#27e643', GradientType=1 );
-  border-radius: 0.3em;
-  cursor: pointer;
-  display: block;
-  height: 0.3em;
-  position: relative;
-  transition: left 0.3s ease-out, width 0.3s ease-out;
-}
-.input-range--disabled .input-range__track {
-  background: rgba(247, 168, 49, 1);
-  background: -moz-linear-gradient(
-    left,
-    rgba(247, 168, 49, 1) 0%,
-    rgba(230, 245, 17, 1) 35%,
-    rgba(172, 245, 14, 1) 75%,
-    rgba(39, 230, 67, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    right top,
-    color-stop(0%, rgba(247, 168, 49, 1)),
-    color-stop(35%, rgba(230, 245, 17, 1)),
-    color-stop(75%, rgba(172, 245, 14, 1)),
-    color-stop(100%, rgba(39, 230, 67, 1))
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgba(247, 168, 49, 1) 0%,
-    rgba(230, 245, 17, 1) 35%,
-    rgba(172, 245, 14, 1) 75%,
-    rgba(39, 230, 67, 1) 100%
-  );
-  background: -o-linear-gradient(
-    left,
-    rgba(247, 168, 49, 1) 0%,
-    rgba(230, 245, 17, 1) 35%,
-    rgba(172, 245, 14, 1) 75%,
-    rgba(39, 230, 67, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    left,
-    rgba(247, 168, 49, 1) 0%,
-    rgba(230, 245, 17, 1) 35%,
-    rgba(172, 245, 14, 1) 75%,
-    rgba(39, 230, 67, 1) 100%
-  );
-  background: linear-gradient(
-    to right,
-    rgba(247, 168, 49, 1) 0%,
-    rgba(230, 245, 17, 1) 35%,
-    rgba(172, 245, 14, 1) 75%,
-    rgba(39, 230, 67, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7a831', endColorstr='#27e643', GradientType=1 );
-}
-
-.input-range__track--background {
-  left: 0;
-  margin-top: -0.15em;
-  position: absolute;
-  right: 0;
-  top: 50%;
-}
-
-.input-range__track--active {
-  background: #3f51b5aa;
-}
-
-.input-range {
-  height: 1em;
-  position: relative;
-  width: 100%;
-  margin: 25px 0;
-}
 label {
   display: block;
   text-align: left;
+  margin: 15px 0px;
+  font-size: 1.3rem;
+}
+.error input {
+  box-shadow: inset 0px 0px 5px red;
+  border: none;
 }
 input,
 .format div {
+  background-color: #fafafa;
   border-radius: 3px;
   width: 100%;
-  height: 2rem;
-  border: 1.3px solid #fff;
+  height: 1em;
   padding: 15px 5px;
   box-shadow: none;
   text-align: left;
@@ -235,6 +52,28 @@ input,
   display: block;
   font-weight: bolder;
   padding: auto;
+  border-radius: 9px;
+  color: #333;
+  transition: all 0.3s linear;
+  &:focus {
+    box-shadow: 3px 3px 2px greenyellow, -3px -3px 2px lightblue;
+    border: none;
+    outline: none;
+  }
+}
+.errorMessage {
+  font-size: 0.8rem;
+  color: red;
+  position: relative;
+  vertical-align: top;
+  text-align: left;
+}
+.placeholder {
+  color: lightgray;
+  font-size: 0.8rem;
+  vertical-align: top;
+  text-align: left;
+  margin-top: 4px;
 }
 .helpingMessage {
   position: relative;
@@ -256,4 +95,11 @@ input,
     border-radius: 9px;
     text-align: center;
   }
+}
+.simpleInput {
+  width: 95%;
+  margin: 20px 15px;
+}
+.hidden {
+  display: none;
 }

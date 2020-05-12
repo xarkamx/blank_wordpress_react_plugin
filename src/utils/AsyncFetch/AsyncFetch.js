@@ -11,8 +11,14 @@ export class AFIO extends Ajax {
   constructor(path) {
     super();
     this.headers = { "Content-Type": "application/x-www-form-urlencoded" };
-
     this.path = path;
+  }
+  /**
+   * añade o substituye headers
+   * @param {*} headers
+   */
+  setHeaders(headers) {
+    this.headers = { ...this.headers, ...headers };
   }
   /**
    * @description obtiene datos de manera asyncrona

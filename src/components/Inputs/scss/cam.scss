@@ -1,0 +1,52 @@
+.camera {
+  width: 25rem;
+  max-width: 80%;
+  align-content: center;
+  margin: 0 auto;
+  * {
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  video,
+  img {
+    width: 25rem;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    background: #aaa;
+    border-radius: 9px;
+  }
+  img {
+    cursor: pointer;
+  }
+  video {
+    cursor: url;
+  }
+  .fa {
+    margin: 0 auto;
+    display: block;
+    width: 50px;
+    padding: 10px;
+    font-size: 15px;
+    color: #555;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  .fa:hover {
+    border-radius: 100%;
+    background: #eee;
+    box-shadow: 3px 3px 3px;
+  }
+  label {
+    font-size: inherit;
+  }
+}
+.gridItem {
+  align-self: center;
+}

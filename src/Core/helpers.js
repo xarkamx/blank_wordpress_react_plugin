@@ -478,3 +478,30 @@ export function between(comp, value1, value2 = null) {
 
   return comp > value1 && comp <= value2;
 }
+/**
+ * Determina si el objeto tiene las llames requeridas
+ * @param [*] keysRequired
+ * @param {*} content
+ * @param string componentName
+ */
+export function checkRequiredContent(
+  keysRequired,
+  content,
+  componentName = "this component"
+) {
+  for (let key of keysRequired) {
+    if (!content[key])
+      throw new Error(`the ${key} index is mandatory in ${componentName}`);
+  }
+  return true;
+}
+/**
+ * En caso de salir del limite del array regresa al valor inicial o final dependiendo desde que posicion se produjo el overflow.
+ * @param [*] arr
+ * @param nummber index
+ */
+export function recursiveArray(arr, index) {
+  if (index >= arr.length) index = 0;
+  if (index < 0) index = arr.length - 1;
+  return arr[index];
+}

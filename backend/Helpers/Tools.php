@@ -13,7 +13,13 @@ class Tools
         $rand = uniqid();
         return md5("$user:$password:$date:$rand");
     }
-    public function splitAtUpperCase($s)
+    /**
+     * Separa cadenas por mayusculas
+     *
+     * @param string $s
+     * @return string
+     */
+    public function splitAtUpperCase(String $s)
     {
         $split = preg_split('/(?=[A-Z])/', $s, -1, PREG_SPLIT_NO_EMPTY);
         return implode(' ', $split);

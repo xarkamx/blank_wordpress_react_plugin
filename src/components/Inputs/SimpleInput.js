@@ -1,20 +1,48 @@
 import React, { useState } from "react";
 import { optionalFn } from "../../Core/helpers";
 import { FontIcon } from "../Icons/FontIcon";
+import "./scss/inputs.scss";
 /*eslint eqeqeq: 0*/
-export function SimpleInput({ title, required, message, ...rest }) {
+export function SimpleInput({
+  title,
+  required,
+  onBlur,
+  message,
+  placeholder,
+  errorMessage = "Invalid Field",
+  children,
+  ...rest
+}) {
+  const [error, setError] = useState(0);
   return (
-    <div className="simpleInput">
+    <div className={`simpleInput ${error ? "error" : ""}`}>
       <label>
         {`${title} ${required ? "*" : ""}`}
         <HelpInput message={message} />
       </label>
-      <input required={required} {...rest} />
+      <input
+        onBlur={(ev) => {
+          optionalFn(onBlur)(ev);
+          if (ev.target.value == "") {
+            return "";
+          }
+          if (!ev.target.checkValidity()) {
+            setError(1);
+          } else {
+            setError(0);
+          }
+        }}
+        required={required}
+        {...rest}
+      />
+      {children}
+      {error ? <p className="errorMessage">{errorMessage}</p> : ""}
+      <p className="placeholder">{placeholder}</p>
     </div>
   );
 }
 export function FormatSimpleInput({
-  title,
+  title = "input",
   required,
   format,
   value,
@@ -79,5 +107,16 @@ export function HelpInput({ message }) {
       </span>
       {show ? <span className="helper">{message}</span> : ""}
     </span>
+  );
+}
+export function autoCompleteInput({ ...rest }) {
+  return (
+    <SimpleInput {...rest}>
+      <ul className="autoComplete">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </SimpleInput>
   );
 }

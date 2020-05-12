@@ -8,12 +8,12 @@ export class Camera {
     const { video } = this;
     navigator.mediaDevices
       .getUserMedia({ video: true, audio: false })
-      .then(stream => {
+      .then((stream) => {
         video.srcObject = stream;
         this.tracks = stream.getTracks();
         video.play();
       })
-      .catch(function(err) {
+      .catch(function (err) {
         console.log("An error occured! " + err);
       });
   }
@@ -21,7 +21,7 @@ export class Camera {
     if (this.tracks == null) {
       return false;
     }
-    this.tracks.forEach(function(track) {
+    this.tracks.forEach(function (track) {
       track.stop();
     });
     return true;
@@ -58,7 +58,7 @@ export class Camera {
       video,
       canvas,
       button,
-      cameraDom
+      cameraDom,
     };
   }
 }
